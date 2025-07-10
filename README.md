@@ -19,4 +19,10 @@ Steps:
 
 
 
-\* I used the SCD41 sensor from SEED-Studio
+Useful resources:
+- [Rpi Pico W-Series Documentation](https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf)
+- [Rpi Pico GPIO-Connections diagram](https://www.elektronik-kompendium.de/sites/raspberry-pi/2611041.htm)
+- [SCD4X sensor datasheets](https://sensirion.com/products/catalog/SEK-SCD41)
+- [Mosquitto (Open-source MQTT broker)](https://mosquitto.org/)
+
+\* I used an SCD41 sensor from SEED-Studio
