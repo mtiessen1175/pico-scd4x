@@ -7,15 +7,21 @@ Steps:
 1. Download the .uf2 firmware from [MicroPython](https://micropython.org/download/RPI_PICO2_W/)
 2. Connect the Pico via USB and drag .uf2 to RPI-RP2 drive (flashes the firmware and reboots the Pico)
 3. Access Pico via CLI (or use an IDE like [Thonny](https://thonny.org/)).
-  - on Linux OS: `apt install picocom`
-  - `picocom /dev/ttyACM0 -b 115200` to start the MicroPython REPL on the Pico
-  - check if install works:
-    ```python
-    >>> import machine
-    >>> led = machine.Pin("LED", machine.Pin.OUT)
-    >>> led.toggle()
-    ```
-4. Connect the sensor to the Pico and save the main.py on the device in order to read/publish the sensor data (via MQTT)
+    - On Linux OS: `apt install picocom`
+    - `picocom /dev/ttyACM0 -b 115200` to start the MicroPython REPL on the Pico
+    - Check if install works:
+        ```python
+        >>> import machine
+        >>> led = machine.Pin("LED", machine.Pin.OUT)
+        >>> led.toggle()
+        ```
+4. Upload the MicroPython MQTT client library [simple.py](https://github.com/micropython/micropython-lib/blob/master/micropython/umqtt.simple/umqtt/simple.py)
+    - via Thonny:
+        1. Open the Files pane (View &rarr; Files).
+        2. Navigate to the Pico device.
+        3. Right-click &rarr; New Directory &rarr; name it: "umqtt"
+        4. Upload *simple.py* into that folder
+5. Connect the sensor to the Pico and upload the *main.py* to the device in order to read/publish the sensor data (via MQTT)
 
 
 
